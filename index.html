@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InsightTools</title>
+    <link href="/assets/css/app.css" rel="stylesheet" type="text/css">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+    <script src="/assets/js/foundation.js"></script>
+    <script src="/assets/js/templates.js"></script>
+    <script src="/assets/js/routes.js"></script>
+    <script src="/assets/js/app.js"></script>
+
+  </head>
+
+<body>
+
+  <!--- off-canvas --->
+    <zf-offcanvas id="offmenu" position="right" class="dark">
+      <a zf-close="" class="close-button">×</a>
+        <div class="block-list">
+        <br>
+          <header style="text-align:center"><img src="assets/img/insightToolsWhite.png" style="height: 80px"/></header>
+        <br>
+            <ul class="icon-top dark" style="text-align:center">
+              <li><a href="#!/"><img zf-iconic="" icon="home" size="medium" class="iconic-color-primary">Home</a></li>
+              <li><a href="#!/exp"><img zf-iconic="" icon="person" size="medium" class="iconic-color-primary">Experiencia</a></li>
+              <li><a href="#!/about"><img zf-iconic="" icon="magnifying-glass" size="medium" class="iconic-color-primary">Acerca</a></li>
+              <li><a href="#!/contact" class="zf-close"><img zf-iconic="" icon="envelope" size="medium" class="iconic-color-primary">Contacto</a></li>
+            </ul>
+        </div>
+
+    </zf-offcanvas>
+    <zf-offcanvas id="offmenuTop" position="top" class="detached dark">
+      <a zf-close="" class="close-button">×</a>
+      <div class="block-list">
+          <header style="text-align:center"><img src="assets/img/insightToolsWhite.png" style="height: 50px"/></header>
+        <br>
+          <ul class="icon-top dark" style="text-align:center">
+            <li><a href="#!/"><img zf-iconic="" icon="home" size="small" class="iconic-color-primary">Home</a></li>
+            <li><a href="#!/exp"><img zf-iconic="" icon="person" size="small" class="iconic-color-primary">Experiencia</a></li>
+            <li><a href="#!/about"><img zf-iconic="" icon="magnifying-glass" size="small" class="iconic-color-primary">Acerca</a></li>
+            <li><a href="#!/contact"><img zf-iconic="" icon="envelope" size="small" class="iconic-color-primary">Contacto</a></li>
+          </ul>
+      </div>
+    </zf-offcanvas>
+  <!--- off-canvas-final --->
+
+  <div class="grid-frame vertical"> <!--- grid-frame --->
+
+    <!--- menubar --->
+        <div class="grid-content shrink" style="padding: 0;">
+          <div class="menu-group dark">
+              <div class="menu-group-left">
+                  <ul class="menu-bar primary align-justify">
+                  <li><a href="#/" class="logoContainer"><div class="logo"><img src="assets/img/insightToolsWhite.png" style="height: 80px; margin-top:-8px; margin-left: -5px;"/></div></a></li>
+                  <li><a class="button dark show-for-small-only" href="#" zf-toggle="offmenuTop"><i class="fi-graph-horizontal"></i></a></li>
+                  </ul>
+              </div>
+              <div class="menu-group-right">
+                    <!--- menu for medium Screen --->
+                    <ul class="icon-left menu-bar show-for-medium-only inline-list">
+                          <li><a href="#!/"><img zf-iconic="" icon="home" size="small" class="iconic-color-primary">Home</a></li>
+
+                          <li><a class="button dark" href="#" zf-toggle="offmenu"><i class="fi-graph-horizontal"></i> Ver más</a></li>
+                    </ul>
+                    <!--- menu for large Screen --->
+                    <ul class="icon-left menu-bar show-for-large inline-list">
+                          <li><a href="#!/"><img zf-iconic="" icon="home" size="small" class="iconic-color-primary">Home</a></li>
+                          <li><a href="#!/exp"><img zf-iconic="" icon="person" size="small" class="iconic-color-primary">Experiencia</a></li>
+                          <li><a href="#!/about"><img zf-iconic="" icon="magnifying-glass" size="small" class="iconic-color-primary">Acerca</a></li>
+                          <li><a href="#!/contact"><img zf-iconic="" icon="envelope" size="small" class="iconic-color-primary">Contacto</a></li>
+                    </ul>
+
+              </div>
+          </div>
+        </div>
+    <!--- menubar-final --->
+
+<!---
+<a class="typeform-share button" href="https://dialnco.typeform.com/to/EtAbSP" data-mode="1" target="_blank">Contacto</a>
+<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
+
+
+
+
+ --->
+
+        <div ui-view class="grid-content">
+        </div>
+
+  </div> <!--- grid-frame-final --->
+
+<!--- footer --->
+    <footer class="footer">
+      <div class="grid-block wrap">
+        <div class="small-12 grid-content">
+          <p class="logoFooter"><img src="assets/img/insightToolsWhite.png" style="height: 100px"/> </p>
+          <p class="footer-links">
+            <a href="#!/">Home</a>
+            <a href="#!/exp">Experiencia</a>
+            <a href="#!/about">Acerca</a>
+            <a href="#!/contact">Contacto</a>
+                <br>
+            <a href="mailto:dialnco@gmail.com">Mail</a>
+            <a>Santiago, Chile</a>
+          </p>
+          <p class="copywrite">Copywrite InsightTools© 2015</p>
+        </div>
+
+      </div>
+    </footer>
+<!--- footer final --->
+
+</body>
+</html>
